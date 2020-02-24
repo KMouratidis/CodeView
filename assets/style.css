@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+pre {
+  margin-top: 0;
+  padding: 10px;
+}
+
+.code-box {
+  background-color: #111111;
+  width: 100%;
+  vertical-align: text-top;
+  color: white;
+}
+
+.code-box-height {
+  height: 500px;
+  overflow: scroll;
+}
+
+.scrolled {
+  height: 600px;
+  overflow-y: scroll !important;
+}
+
+.double {
+  height: 1000px;
+  background-color: #CCCCCC;
+}
+
+
+
+.token.operator, .token.punctuation {
+  background: none;
+  color: #FFEA30;
+}
