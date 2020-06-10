@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import sys
 from io import StringIO
 
@@ -22,10 +22,10 @@ def execute_code(username):
         code_output = {}
         console_output = str(e)
 
-    return {
+    return jsonify({
         "code_output": code_output,
         "console_output": console_output,
-    }
+    })
 
 
 if __name__ == '__main__':

@@ -1,5 +1,6 @@
 import dash_editor_components
 import dash
+from dash import no_update
 import dash_html_components as html
 import dash_core_components as dcc
 from dash.dependencies import Input, Output, State
@@ -41,7 +42,7 @@ app.layout = html.Div([
 
     html.Div([
         html.Div([
-            html.Button("Submit code", id="code_test", n_clicks=0),
+            html.Button("Test code", id="code_test", n_clicks=0),
         ], className="two columns"),
         html.Div([
             html.Button("Submit code", id="code_submit", n_clicks=0),
@@ -100,7 +101,7 @@ def execute_code(n_clicks, code):
         ]
 
     except Exception as e:
-        return str(e)
+        return no_update, str(e)
 
 
 @app.callback([Output("prev_code_input", "value"),
